@@ -1,4 +1,4 @@
-import Header from '@/components/Header'
+import PersonalInformation from '@/components/PersonalInformation'
 import About from '@/components/About'
 import Experience from '@/components/Experience'
 import Education from '@/components/Education'
@@ -8,14 +8,18 @@ import Volunteer from '@/components/Volunteer'
 export default function Home() {
   return (
     <main className="min-h-screen bg-gray-50">
-      <div className="max-w-4xl mx-auto px-4 py-8">
-        <Header />
-        <div className="space-y-12">
-          <About />
-          <Experience />
-          <Education />
-          <Skills />
-          <Volunteer />
+      <div className="max-w-7xl mx-auto px-4 py-8">
+        <div className="grid grid-cols-1 lg:grid-cols-[300px_1fr] gap-8">
+          <div className="lg:sticky lg:top-8 lg:self-start">
+            <PersonalInformation />
+            <Skills />
+          </div>
+          <div className="space-y-12">
+            <About />
+            <Experience />
+            <Education />
+            <Volunteer />
+          </div>
         </div>
       </div>
     </main>
